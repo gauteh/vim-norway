@@ -1,6 +1,6 @@
 # Vim Norway
 
-Useful re-mappings of Norwegian keyboards to make vim's default key-mappings work more smoothly, most notably:
+Useful re-mappings of Norwegian keyboards to make vims default key-mappings work more smoothly, most notably:
 
 ```
 ø   ->  [
