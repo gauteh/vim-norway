@@ -1,0 +1,33 @@
+*norway.txt*
+
+INTRODUCTION                                    *norway*
+
+
+Useful re-mappings of Norwegian keyboards to make vims default key-mappings
+work more smoothly using `langmap` and `keymap`.
+
+USAGE                                           *norway:usage*
+
+By default the mappings are enabled at startup. You can disable this by
+setting: >
+
+  let g:norway_enable_at_startup = 0
+<
+
+otherwise call `EnableNorway()`, `DisableNorway()` or `ToggleNorway()`. Or use
+the mapping `yon` to toggle the mappings.
+
+MAPPINGS                                        *norway:mappings*
+
+>
+
+  ,   /     (not insert-mode)
+  `   \     (not insert-mode)
+  ¤   $
+  ø   [
+  æ   ]
+  Ø   {
+  Æ   }
+<
+
+vim:ft=help:norl:
