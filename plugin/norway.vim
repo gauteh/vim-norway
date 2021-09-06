@@ -5,23 +5,65 @@
 " Last Changed:	2021-09-05
 
 
-function! EnableNorway()
-  " non-INSERT mode
-  set langmap=`\\,¤$,ø[,æ],Ø{,Æ}
-  map , /
+" when not in insert mode, remap some non-US keys
+map , /
+" noremap M ,
+map ´ \
+" map ; ?
 
-  " INSERT mode
-  set keymap=norway
+map  ¤ $
+imap ¤ $
+nmap ¤ $
+vmap ¤ $
+cmap ¤ $
+xmap ¤ $
+lmap ¤ $
+smap ¤ $
+omap ¤ $
+vmap S¤ S$
+nmap g¤ g$
+
+" Use ØÆ for brackets
+map  ø [
+map! ø [
+map  æ ]
+map! æ ]
+map  Ø {
+map! Ø {
+map  Æ }
+map! Æ }
+map  rø r[
+map  rØ r{
+map  ræ r]
+map  rÆ r}
+vmap Sø S[
+vmap SØ S{
+vmap Sæ S]
+vmap SÆ S}
+
+function! EnableNorway()
+    " for english layout
+    inoremap \[ å
+    inoremap \' æ
+    inoremap \; ø
+    inoremap \[[ Å
+    inoremap \'' Æ
+    inoremap \;; Ø
+
+    " for norwegian layout
+    imap ø [
+    imap æ ]
+    imap Ø {
+    imap Æ }
 
   set spelllang=nn
 endfunction
 
 function! DisableNorway()
-  set langmap=
-  unmap ,
-
-  " INSERT mode
-  set keymap=
+    iunmap ø
+    iunmap Ø
+    iunmap æ
+    iunmap Æ
 
   set spelllang=en
 endfunction
