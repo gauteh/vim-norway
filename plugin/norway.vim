@@ -56,7 +56,7 @@ function! EnableNorway()
     imap Ø {
     imap Æ }
 
-  set spelllang=nn
+  set spelllang=en
 endfunction
 
 function! DisableNorway()
@@ -65,7 +65,7 @@ function! DisableNorway()
     iunmap æ
     iunmap Æ
 
-  set spelllang=en
+  set spelllang=nn
 endfunction
 
 
