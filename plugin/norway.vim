@@ -41,6 +41,14 @@ vmap SØ S{
 vmap Sæ S]
 vmap SÆ S}
 
+inoremap \ø ø
+inoremap \æ æ
+inoremap \å å
+
+inoremap \Ø Ø
+inoremap \Æ Æ
+inoremap \Å Å
+
 function! EnableNorway()
     " for english layout
     inoremap \[ å
